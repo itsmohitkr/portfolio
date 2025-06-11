@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohit Kumar - Portfolio</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Extreme background grid */
+        .background-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -2;
+            pointer-events: none;
+            opacity: 0.13;
+            background:
+                repeating-linear-gradient(0deg, #64748b 0px, #64748b 1px, transparent 1px, transparent 40px),
+                repeating-linear-gradient(90deg, #64748b 0px, #64748b 1px, transparent 1px, transparent 40px);
+            animation: grid-move 18s linear infinite;
+        }
+
+        @keyframes grid-move {
+            0% {
+                background-position: 0 0, 0 0;
+            }
+
+            100% {
+                background-position: 40px 40px, 40px 40px;
+            }
+        }
+
+        /* Animated dotted points */
+        .background-dots {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.22;
+        }
+
+        .background-dots span {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #64748b;
+            opacity: 0.7;
+            animation: dot-move 12s linear infinite;
+        }
+
+        .background-dots span:nth-child(1) {
+            top: 10vh;
+            left: 15vw;
+            animation-delay: 0s;
+        }
+
+        .background-dots span:nth-child(2) {
+            top: 40vh;
+            left: 60vw;
+            animation-delay: 2s;
+        }
+
+        .background-dots span:nth-child(3) {
+            top: 70vh;
+            left: 30vw;
+            animation-delay: 4s;
+        }
+
+        .background-dots span:nth-child(4) {
+            top: 25vh;
+            left: 80vw;
+            animation-delay: 6s;
+        }
+
+        .background-dots span:nth-child(5) {
+            top: 80vh;
+            left: 10vw;
+            animation-delay: 8s;
+        }
+
+        @keyframes dot-move {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-30px) scale(1.2);
+            }
+
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        body,
+        html {
+            width: 100vw;
+            min-width: 100vw;
+            max-width: 100vw;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            transition: none !important;
+            /* Hide scrollbar for all browsers */
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE and Edge */
+        }
+
+        body::-webkit-scrollbar,
+        html::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Opera */
+        }
+
+        .main-container {
+            width: 100vw;
+            min-width: 100vw;
+            max-width: 100vw;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .profile-img {
+            border-radius: 50%;
+            border: 4px solid #64748b;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <div class="background-grid"></div>
+    <div class="background-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="main-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#" id="view-certs-link">View Certifications</a>
+            </nav>
+            <div id="theme-toggle"
+                class="relative w-16 h-8 flex items-center p-1 rounded-full cursor-pointer toggle-container">
+                <div class="toggle-switch absolute"></div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content-area">
+            <header id="sticky-header" class="sticky-header">
+                <h1 class="text-xl font-bold">Mohit Kumar</h1>
+                <h2 class="text-lg font-semibold opacity-80">Software Engineering | Chegg India</h2>
+            </header>
+
+            <div id="content-body" class="px-4 md:px-6 lg:px-8">
+                <div id="main-header" class="flex flex-row items-center justify-between mb-12 pt-8">
+                    <div class="text-left">
+                        <h1 class="text-4xl font-bold mb-1">Mohit Kumar</h1>
+                        <h2 class="text-2xl font-semibold">Software Engineering | Chegg India</h2>
+                    </div>
+                    <div class="flex justify-end">
+                        <img 
+                            src="images/your-profile-image.jpg" 
+                            alt="Mohit Kumar Profile" 
+                            class="profile-img"
+                            width="120" height="120"
+                        />
+                    </div>
+                </div>
+
+                <section id="contact-section" class="mb-12 fade-in-section">
+                    <div
+                        class="flex justify-center flex-wrap gap-x-6 gap-y-2 text-md mb-4 border-b pb-4 border-gray-300 dark:border-gray-600">
+                        <a href="mailto:itsmohit3005@gmail.com" class="contact-link flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                            itsmohit3005@gmail.com
+                        </a>
+                        
+                        <span class="contact-link flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 15a1 1 0 100-2 1 1 0 000 2z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            +91-7062346051         </span>
+                        <a href="https://github.com/itsmohitkritsmohitkr" target="_blank" rel="noopener noreferrer"
+                            class="contact-link flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.499.09.679-.217.679-.481 0-.237-.008-.865-.013-1.701-2.722.592-3.49-1.314-3.49-1.314-.446-1.134-1.091-1.432-1.091-1.432-.884-.604.066-.593.066-.593.977.068 1.492.997 1.492.997.868 1.488 2.275 1.063 2.83.81.083-.63.34-1.063.618-1.306-2.169-.247-4.44-1.088-4.44-4.856 0-1.07.384-1.948 1.025-2.637-.103-.247-.446-1.252.098-2.617 0 0 .839-.264 2.75 1.004.799-.222 1.65-.333 2.501-.337.85.004 1.7.115 2.501.337 1.909-1.268 2.747-1.004 2.747-1.004.546 1.365.203 2.37.098 2.617.64.69 1.023 1.566 1.023 2.637 0 3.776-2.273 4.606-4.448 4.852.348.297.675.838.675 1.691 0 1.224-.011 2.21-.011 2.507 0 .267.172.571.687.472C19.146 20.193 22 16.425 22 12.017 22 6.484 17.523 2 12 2z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"
+                            class="contact-link flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19.7 0H4.3C2.18 0 0 2.18 0 4.3v15.4C0 21.82 2.18 24 4.3 24h15.4c2.12 0 4.3-2.18 4.3-4.3V4.3C24 2.18 21.82 0 19.7 0zM7.5 20.5H4V9.7h3.5v10.8zM5.75 8.25A2.25 2.25 0 118 6 2.25 2.25 0 015.75 8.25zM20.5 20.5h-3.5V14c0-1.78-.99-2.28-1.5-.75-.51 1.53-2 1.5-2 1.5v6.25h-3.5V9.7h3.5v1.9c.5-.95 1.75-1.95 3.5-1.95 2.5 0 4.5 2 4.5 6.5v4.8z" />
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </section>
+
+                <div id="sections-container">
+                    <!-- About Me Section -->
+                    <section id="about" class="mb-12 fade-in-section">
+                        <h2 class="text-2xl font-bold section-title">About Me</h2>
+                        <div class="card">
+                            <p class="text-base leading-relaxed">As a <strong>Software Engineer</strong> at
+                                <strong>Chegg India</strong>, I specialize in building robust and scalable web
+                                applications. My expertise spans across full-stack development, with a strong foundation
+                                in <strong>JavaScript</strong>, <strong>Node.js</strong>, and <strong>React</strong>,
+                                coupled with extensive experience in cloud platforms like <strong>AWS</strong> and
+                                database management with <strong>PostgreSQL</strong>. I am passionate about creating
+                                efficient solutions, enhancing user experiences, and contributing to impactful projects.
+                                I thrive in environments where I can continuously learn and apply new technologies to
+                                solve complex engineering challenges.</p>
+                        </div>
+                    </section>
+
+                    <!-- Skills Section -->
+                    <section id="skills" class="mb-12 fade-in-section">
+                        <h2 class="text-2xl font-bold section-title">Skills</h2>
+                        <div class="card">
+                            <div class="skill-group"><span class="skill-label">Languages:</span><span
+                                    class="skill-tag">Javascript</span><span class="skill-tag">C++</span><span
+                                    class="skill-tag">Java</span></div>
+                            <div class="skill-group"><span class="skill-label">Core Competencies:</span><span
+                                    class="skill-tag">Object-orientated programming</span><span class="skill-tag">Data
+                                    structures</span><span class="skill-tag">Algorithms</span></div>
+                            <div class="skill-group"><span class="skill-label">Development Tools:</span><span
+                                    class="skill-tag">Node.JS</span><span class="skill-tag">Express.JS</span><span
+                                    class="skill-tag">React</span><span class="skill-tag">Spring Boot</span><span
+                                    class="skill-tag">HTML</span><span class="skill-tag">CSS</span></div>
+                            <div class="skill-group"><span class="skill-label">Familiar with:</span><span
+                                    class="skill-tag">System Design</span><span class="skill-tag">PostgreSQL</span><span
+                                    class="skill-tag">Docker</span><span class="skill-tag">Kubernetes</span><span
+                                    class="skill-tag">CI/CD</span><span class="skill-tag">Git</span><span
+                                    class="skill-tag">AWS</span><span class="skill-tag">Microservices</span></div>
+                        </div>
+                    </section>
+
+                    <!-- Experience Section -->
+                    <section id="experience" class="mb-12 fade-in-section">
+                        <h2 class="text-2xl font-bold section-title">Experience</h2>
+                        <div class="card mb-6">
+                            <h3 class="text-xl font-semibold mb-1">Software Engineering, Chegg India - Delhi, India</h3>
+                            <p class="text-sm mb-2 opacity-70">Jan 2022 - Present</p>
+                            <ul class="list-disc list-inside space-y-2 text-sm list-disc-indent">
+                                <li>Developing an on-demand IT lab environment using AWS EC2, enabling students to
+                                    launch pre-configured virtual machines with Amazon NICE DCV for remote access.</li>
+                                <li>Developed APIs and implemented core functionality for various beta projects integral
+                                    to the engineering curriculum, enhancing overall learning experiences.</li>
+                                <li>Graded and provided feedback on 2000+ student coding submissions, while offering
+                                    real-time support via chat and video calls, helping students overcome coding
+                                    challenges and clarify engineering concepts. Also played a key role in QA processes
+                                    to ensure the highest educational standards for courses.</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3 class="text-xl font-semibold mb-1">Web Development Intern, Iha consulting services -
+                                Hyderabad</h3>
+                            <p class="text-sm mb-2 opacity-70">June 2021 - Aug 2021</p>
+                            <ul class="list-disc list-inside space-y-2 text-sm list-disc-indent">
+                                <li>Build an application that supports authentication features for new user registration
+                                    for an upcoming webinar.</li>
+                                <li>Develop publication pages and updates about upcoming events with a content
+                                    management page for updating posts by the admin.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Projects Section -->
+                    <section id="projects" class="mb-12 fade-in-section">
+                        <h2 class="text-2xl font-bold section-title">Projects</h2>
+                        <div class="card mb-6">
+                            <h3 class="text-xl font-semibold mb-1">CSV File Processing Application</h3>
+                            <div class="flex flex-wrap items-center my-2">
+                                <a href="#" class="project-link deployed">Deployed Link</a>
+                                <a href="https://github.com/itsmohitkritsmohitkr/csv-processing-application"
+                                    target="_blank" rel="noopener noreferrer" class="project-link github">Github
+                                    Repo</a>
+                            </div>
+                            <div class="project-detail-item"><strong class="problem-text">Problem:</strong> Many
+                                applications handle large CSV files with image links, but these images often need to be
+                                compressed for efficient storage and faster loading times. Manual processing is tedious
+                                and error-prone.</div>
+                            <div class="project-detail-item mt-2"><strong class="solution-text">Solution:</strong>
+                                Developed an automated application leveraging AWS S3, Lambda, SNS, and SQS. It streams
+                                large CSV files, compresses image quality by 50%, generates new URLs for compressed
+                                images, and stores metadata in PostgreSQL for retrieval via unique request IDs.</div>
+                            <div class="project-detail-item mt-2"><strong class="impact-text">Impact:</strong>
+                                Significantly reduced manual effort and processing time for large CSV files. Achieved
+                                efficient image storage and retrieval, improving application performance and user
+                                experience. Provided a scalable and robust solution for handling image processing
+                                workflows.</div>
+                            <div class="mt-4">
+                                <strong class="text-sm">Tools Used:</strong>
+                                <div class="flex flex-wrap items-center gap-2 mt-1">
+                                    <span class="skill-tag text-xs">Node.js</span><span
+                                        class="skill-tag text-xs">React</span><span class="skill-tag text-xs">AWS
+                                        S3</span><span class="skill-tag text-xs">AWS Lambda</span><span
+                                        class="skill-tag text-xs">AWS SQS</span><span class="skill-tag text-xs">AWS
+                                        SNS</span><span class="skill-tag text-xs">PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-6">
+                            <h3 class="text-xl font-semibold mb-1">Auth-Microservices | devplanet.online</h3>
+                            <div class="flex flex-wrap items-center my-2">
+                                <a href="https://devplanet.online" target="_blank" rel="noopener noreferrer"
+                                    class="project-link deployed">Deployed Link</a>
+                                <a href="https://github.com/itsmohitkritsmohitkr/Auth-Microservices" target="_blank"
+                                    rel="noopener noreferrer" class="project-link github">Github Repo</a>
+                            </div>
+                            <div class="project-detail-item"><strong class="problem-text">Problem:</strong> Implementing
+                                secure and reusable authentication features across multiple applications can be complex
+                                and time-consuming.</div>
+                            <div class="project-detail-item mt-2"><strong class="solution-text">Solution:</strong> Built
+                                a robust, scalable authentication microservices system with endpoints for login, signup,
+                                logout, forgot-password, reset-password, and verify-token. Deployed on AWS EC2 using
+                                Docker, leveraging CI/CD pipelines with GitHub Actions for automated deployment. Ensured
+                                secure communication by implementing OpenSSL certificates.</div>
+                            <div class="project-detail-item mt-2"><strong class="impact-text">Impact:</strong> Provided
+                                a centralized, secure, and easily integrable authentication solution for various
+                                applications, reducing development overhead and ensuring consistent security standards.
+                                Facilitated seamless access for API key holders.</div>
+                            <div class="mt-4">
+                                <strong class="text-sm">Tools Used:</strong>
+                                <div class="flex flex-wrap items-center gap-2 mt-1">
+                                    <span class="skill-tag text-xs">Node.js</span><span
+                                        class="skill-tag text-xs">Express.js</span><span
+                                        class="skill-tag text-xs">PostgreSQL</span><span
+                                        class="skill-tag text-xs">Docker</span><span
+                                        class="skill-tag text-xs">Nginx</span><span
+                                        class="skill-tag text-xs">OpenSSL</span><span class="skill-tag text-xs">GitHub
+                                        Actions</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3 class="text-xl font-semibold mb-1">Restaurant Booking System</h3>
+                            <div class="flex flex-wrap items-center my-2">
+                                <a href="#" class="project-link deployed">Deployed Link</a>
+                                <a href="https://github.com/itsmohitkritsmohitkr/restaurant-booking-system"
+                                    target="_blank" rel="noopener noreferrer" class="project-link github">Github
+                                    Repo</a>
+                            </div>
+                            <div class="project-detail-item"><strong class="problem-text">Problem:</strong> Traditional
+                                restaurant booking processes are often manual, leading to inefficiencies in reservation
+                                and table management.</div>
+                            <div class="project-detail-item mt-2"><strong class="solution-text">Solution:</strong>
+                                Developed a comprehensive restaurant booking system and implemented reservation
+                                management features including creation, listing, modification, and cancellation, and
+                                table management functionalities such as new table creation, seating, and status
+                                tracking. Focused on clean code, reusable React components, and robust API
+                                implementation with detailed error handling.</div>
+                            <div class="project-detail-item mt-2"><strong class="impact-text">Impact:</strong>
+                                Streamlined the booking and table management process for restaurants, improving
+                                operational efficiency and customer satisfaction. The emphasis on clean code and robust
+                                APIs ensures maintainability and scalability.</div>
+                            <div class="mt-4">
+                                <strong class="text-sm">Tools Used:</strong>
+                                <div class="flex flex-wrap items-center gap-2 mt-1">
+                                    <span class="skill-tag text-xs">Node.js</span><span
+                                        class="skill-tag text-xs">Express.js</span><span
+                                        class="skill-tag text-xs">JavaScript</span><span
+                                        class="skill-tag text-xs">React</span><span
+                                        class="skill-tag text-xs">PostgreSQL</span><span
+                                        class="skill-tag text-xs">Knex.js</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Education Section -->
+                    <section id="education" class="mb-12 fade-in-section">
+                        <h2 class="text-2xl font-bold section-title">Education</h2>
+                        <div class="card">
+                            <h3 class="text-xl font-semibold mb-1">B.Tech, Engineering Physics (major in electronics)
+                            </h3>
+                            <p class="opacity-70">Delhi Technological University | 2018 - 2022</p>
+                            <p>CGPA: 7.41/10</p>
+                        </div>
+                    </section>
+
+                    <!-- Certifications Section -->
+                    <section id="certifications" class="mb-12 fade-in-section">
+                        <h2 class="text-2xl font-bold section-title">Certifications</h2>
+                        <div class="card">
+                            <ul class="list-disc list-inside space-y-2 text-sm list-disc-indent">
+                                <li><a href="#" target="_blank" rel="noopener noreferrer" class="hover:underline">Java
+                                        Spring Framework 6 with Spring Boot 3</a></li>
+                                <li><a href="#" target="_blank" rel="noopener noreferrer" class="hover:underline">The
+                                        Ultimate DevOps Bootcamp</a></li>
+                                <li><a href="#" target="_blank" rel="noopener noreferrer" class="hover:underline">Data
+                                        Structures and Algorithms Essentials using C++</a></li>
+                                <li><a href="#" target="_blank" rel="noopener noreferrer" class="hover:underline">Web
+                                        development with Node.JS</a></li>
+                                <li><a href="#" target="_blank" rel="noopener noreferrer"
+                                        class="hover:underline">Interactivity with JavaScript</a></li>
+                                <li><a href="#" target="_blank" rel="noopener noreferrer"
+                                        class="hover:underline">Interactivity with HTML5</a></li>
+                                <li><a href="#" target="_blank" rel="noopener noreferrer"
+                                        class="hover:underline">Introduction to CSS3</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+
+                <footer class="text-center py-4 border-t border-gray-300 dark:border-gray-600 mt-8">
+                    <p class="text-sm opacity-70">&copy; Mohit Kumar</p>
+                </footer>
+            </div>
+        </main>
+
+        <!-- Right Timeline Column -->
+        <aside class="timeline-column">
+            <h2 class="text-2xl font-bold section-title">Current Status</h2>
+            <ul class="timeline-list">
+                <li class="timeline-item glowing-dot">
+                    <h3 class="timeline-item-title">Learning System Design</h3>
+                    <p class="timeline-item-desc">Deepening my understanding of scalable architecture and distributed
+                        systems.</p>
+                </li>
+                <li class="timeline-item">
+                    <h3 class="timeline-item-title">Completed DevOps Bootcamp</h3>
+                    <p class="timeline-item-desc">Finished an intensive bootcamp covering CI/CD, Docker, and Kubernetes.
+                    </p>
+                </li>
+                <li class="timeline-item">
+                    <h3 class="timeline-item-title">Full-Stack Development</h3>
+                    <p class="timeline-item-desc">Actively building web applications at Chegg India using Node.js,
+                        React, and AWS.</p>
+                </li>
+                <li class="timeline-item">
+                    <h3 class="timeline-item-title">Graduated from DTU</h3>
+                    <p class="timeline-item-desc">Completed my B.Tech in Engineering Physics.</p>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Add this where you want the recent push info to show -->
+    <div id="github-recent-push" class="my-4"></div>
+
+    <!-- Certification Modal -->
+    <div id="certs-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div id="modal-close" class="modal-close-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </div>
+            <h2 class="text-2xl font-bold section-title mb-4">Certifications</h2>
+            <div class="cert-grid">
+                <img src="images/java.jpg" alt="Certificate 1">
+                <img src="images/devops.jpg" alt="Certificate 2">
+                <img src="images/c++.jpg" alt="Certificate 3">
+                <img src="images/node.png" alt="Certificate 4">
+                <img src="images/js.png" alt="Certificate 5">
+                <img src="images/html.png" alt="Certificate 6">
+                <img src="images/css.png" alt="Certificate 7">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
