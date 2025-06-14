@@ -1,16 +1,4 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
-# Okay, can you give me the list of 100 product best companies whose offices are in India and hire for the software developer and best for the engineering graduates along with their LinkedIn profile, carrier base, and the number of employees they have?
-
-Providing a list of 100 product-based companies with offices in India, LinkedIn profiles, career base, and exact employee numbers is challenging for several reasons:
-
-- **Employee numbers** are often not disclosed or are rapidly changing, especially for private or global companies.
-- **Career base** (meaning the main area of hiring or expertise) is broad for most large product companies, but software development is a core area for all listed.
-- **LinkedIn profiles** are available for most major companies, but some smaller or niche firms may not have a dedicated LinkedIn page.
-
-Below is a curated list of the **best product-based companies for engineering graduates** hiring software developers in India, including their LinkedIn profiles and, where possible, estimated employee counts and major career bases. The list is compiled from reputable sources and industry knowledge[^1][^2].
-
----
 
 ## Top 100 Product-Based Companies in India for Software Developers
 
@@ -117,80 +105,4 @@ Below is a curated list of the **best product-based companies for engineering gr
 | 99 | PhonePe | https://in.linkedin.com/company/phonepe | Software Dev, FinTech | (See above) |
 | 100 | Jio Platforms | https://in.linkedin.com/company/jio-platforms | Software Dev, Telecom | (See above) |
 
-
----
-
-### Key Notes
-
-- **Employee numbers** are approximate and sourced from public reports, LinkedIn, and recent news. For global companies, both India and global numbers are provided where available.
-- **Career Base** is generalized for the main area of hiring for software developers; most companies hire across multiple domains.
-- **LinkedIn Profiles** are included for easy access to company career pages and job postings[^1][^2].
-- **Some companies are repeated or have multiple brands** (e.g., Ola and Ola Electric, Swiggy and Swiggy Instamart). For a strictly unique list, you may wish to substitute with other notable companies such as **BMC Software**, **Thoughtworks**, **ThoughtSpot**, **Tata Elxsi**, **Cyient**, **Persistent Systems**, **KPIT**, **Happiest Minds**, etc.
-
----
-
-**If you need a strictly unique list of 100 companies, let me know, and I can replace duplicates with other top product-based firms.**
-This list is designed to be comprehensive and relevant for engineering graduates seeking software developer roles in India[^1][^2].
-
-<div style="text-align: center">⁂</div>
-
-[^1]: https://www.linkedin.com/posts/amanbarnwal_top-100-product-based-companies-in-india-activity-6999939603214336000-oE3g
-
-[^2]: https://www.upgrad.com/blog/top-10-product-based-companies-in-india/
-
-[^3]: https://www.deshawindia.com/careers/all-positions-in-software-development-2614
-
-[^4]: https://in.linkedin.com/in/anu-sharma-2002
-
-[^5]: https://in.linkedin.com/jobs/google-jobs
-
-[^6]: https://www.thehindubusinessline.com/info-tech/google-to-double-workforce-in-india-in-two-years-sanjay-gupta/article37573867.ece
-
-[^7]: https://in.linkedin.com/company/microsoft-india-r\&d-private-limited
-
-[^8]: https://careers.microsoft.com/v2/global/en/locations/india.html
-
-[^9]: https://www.peoplematters.in/news/talent-management/microsoft-rules-out-layoffs-in-india-amid-global-job-cuts-43958
-
-[^10]: https://in.linkedin.com/company/flipkart
-
-[^11]: https://in.linkedin.com/jobs/flipkart-jobs
-
-[^12]: https://www.newindianexpress.com/business/2025/May/27/flipkart-to-hire-5000-employees-in-2025
-
-[^13]: https://in.linkedin.com/in/jananims
-
-[^14]: https://hr.economictimes.indiatimes.com/news/industry/adobe-expands-india-footprint-opens-new-office-to-host-2k-employees/99735260
-
-[^15]: https://www.youtube.com/watch?v=4klEoSvml_A
-
-[^16]: https://in.linkedin.com/in/aditi-jain-501b86125
-
-[^17]: https://in.linkedin.com/company/flipkart/jobs
-
-[^18]: https://zolostays.com/blog/product-based-companies-india/
-
-[^19]: https://in.linkedin.com/in/kunal-gupta-47787929
-
-[^20]: https://www.interviewbit.com/blog/product-based-companies-in-india/
-
-[^21]: https://in.linkedin.com/in/salhath-khan-0397b9b
-
-[^22]: https://www.studocu.com/in/document/maulana-abul-kalam-azad-university-of-technology/b-tech-in-information-technology/top-100-product-based-companies-in-india/43714897
-
-[^23]: https://workat.tech/general/article/top-product-based-companies-in-india-7xgxclagorak
-
-[^24]: https://www.reddit.com/r/developersIndia/comments/1fb3d1v/list_of_companies_that_hire_in_india_for_software/
-
-[^25]: https://in.linkedin.com/company/google
-
-[^26]: https://in.linkedin.com/jobs/google-india-jobs
-
-[^27]: https://in.linkedin.com/in/priyansh-agarwal
-
-[^28]: https://in.linkedin.com/in/ravi-iyer-24180a12
-
-[^29]: https://careers.adobe.com
-
-[^30]: https://www.guvi.in/blog/product-based-companies-for-civil-engineers/
 
