@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X, Sun, Moon } from 'lucide-react'
 import { useTheme } from '../context/ThemeContext'
+import profileImage from '../../images/your-profile-image.jpg'
 
 const Header = ({ activeSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

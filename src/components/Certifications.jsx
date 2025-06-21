@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Award, ExternalLink, X } from 'lucide-react'
+import javaImage from '../../images/java.jpg'
+import devopsImage from '../../images/devops.jpg'
+import cppImage from '../../images/c++.jpg'
+import nodeImage from '../../images/node.png'
+import jsImage from '../../images/js.png'
+import htmlImage from '../../images/html.png'
+import cssImage from '../../images/css.png'
 
 const Certifications = () => {
   const [selectedCert, setSelectedCert] = useState(null)
@@ -9,43 +16,43 @@ const Certifications = () => {
     {
       title: "Java Spring Framework 6 with Spring Boot 3",
       provider: "Telusko",
-      image:"../../images/java.jpg",
+      image: javaImage,
       link: "https://www.udemy.com/certificate/UC-1d088006-a13a-4ae4-a4c1-6e671a6da014/",
     },
     {
       title: "The Ultimate DevOps Bootcamp",
       provider: "CodeKloud",
-      image:"../../images/devops.jpg",
+      image: devopsImage,
       link: "https://www.udemy.com/certificate/UC-fe423703-8fc6-4717-9130-91e99e736f42/",
     },
     {
       title: "Data Structures and Algorithms Essentials using C++",
       provider: "Udemy",
-      image:"../../images/c++.jpg",
+      image: cppImage,
       link: "https://www.udemy.com/certificate/UC-10f6bfd8-1e21-4048-bf62-2f720ff6a6f3/",
     },
     {
       title: "Web development with Node.JS",
       provider: "Coding Blocks",
-      image:"../../images/node.png",
+      image: nodeImage,
       link: "https://online.codingblocks.com/app/certificates/CBOL-172785-f4c1",
     },
     {
       title: "Interactivity with JavaScript",
       provider: "Coursera",
-      image:"../../images/js.png",
+      image: jsImage,
       link: "https://coursera.org/share/a2c1e0b02684a55bee53a40d004575cb",
     },
     {
       title: "Interactivity with HTML5",
       provider: "Coursera",
-      image:"../../images/html.png",
+      image: htmlImage,
       link: "https://coursera.org/share/efbbb26f8308f8f8f4f8040f6d97bbae",
     },
     {
       title: "Introduction to CSS3",
       provider: "Coursera",
-      image:"../../images/css.png",
+      image: cssImage,
       link: "https://coursera.org/share/ee5b9ca019f5c3c28421773dc2bf65a4",
     },
   ];
