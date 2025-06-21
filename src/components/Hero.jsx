@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, Phone, Download } from 'lucide-react'
 
+
 const Hero = () => {
   const socialLinks = [
     {
