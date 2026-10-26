@@ -5,6 +5,17 @@ import { ExternalLink, Github, Zap, Target, TrendingUp } from 'lucide-react'
 const Projects = () => {
   const projects = [
     {
+      title: "In-House Scheduling Platform (Calendly Alternative)",
+      description: "Enterprise meeting and event scheduling platform replacing Calendly with fair-share coach routing and high-concurrency reservation capabilities.",
+      problem: "Third-party solutions like Calendly could not support complex organizational routing, coach-selection policies, or internal privacy rules. During peak booking windows, high-concurrency bursts risked overselling slots and creating double-booking race conditions.",
+      solution: "Architected a full-stack scheduling monorepo featuring deterministic PostgreSQL row-level locks, transactional outbox messaging with RabbitMQ, and an optimized timezone conversion engine with memoized internationalization formatting.",
+      impact: "Successfully eliminated dependency on Calendly. Slashed p95 slot availability latency by 14× (1.9s to 140ms), reduced public page response times by up to 100× (800ms to 10ms), decreased server event-loop lag by 90%, and eliminated double-booking concurrency conflicts.",
+      technologies: ["Node.js", "Express", "TypeScript", "React", "PostgreSQL", "Prisma", "RabbitMQ", "Prometheus", "Turborepo"],
+      deployedLink: "#",
+      githubLink: "#",
+      featured: true
+    },
+    {
       title: 'CSV File Processing Application',
       description: 'Automated application leveraging AWS S3, Lambda, SNS, and SQS for processing large CSV files with image compression.',
       problem: 'Many applications handle large CSV files with image links, but these images often need to be compressed for efficient storage and faster loading times. Manual processing is tedious and error-prone.',

@@ -11,6 +11,10 @@ const Experience = () => {
       period: 'Jan 2022 - Present',
       type: 'Full-time',
       responsibilities: [
+        "Architected an in-house scheduling platform to replace Calendly, implementing a high-concurrency reservation engine with deterministic PostgreSQL row-level locking to eliminate double-booking race conditions.",
+        "Profiled and resolved runtime bottlenecks using CPU flamegraphs and k6 load testing, slashing p95 slot availability response times by 14× (1.9s to 140ms) and lowering event-loop lag by 90% via memoized timezone formatters.",
+        "Designed a fault-tolerant asynchronous notification microservice using the Transactional Outbox Pattern and RabbitMQ with Dead Letter Queues (DLQ), guaranteeing zero message loss across network partitions.",
+        "Built fair-share round-robin routing with batched availability prefetching to prevent N+1 database queries, alongside Okta OIDC/SSO and Prometheus time-series observability pipelines.",
         'Developing an on-demand IT lab environment using AWS EC2, enabling students to launch pre-configured virtual machines with Amazon NICE DCV for remote access.',
         'Developed APIs and implemented core functionality for various beta projects integral to the engineering curriculum, enhancing overall learning experiences.',
         'Graded and provided feedback on 2000+ student coding submissions, while offering real-time support via chat and video calls, helping students overcome coding challenges and clarify engineering concepts. Also played a key role in QA processes to ensure the highest educational standards for courses.'
